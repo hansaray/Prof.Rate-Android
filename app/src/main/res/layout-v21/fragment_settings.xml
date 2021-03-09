@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/backGroundColor"
+    tools:context=".SettingsFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/settingsToolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="?attr/backGroundColor"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:contentInsetStart="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+       <androidx.constraintlayout.widget.ConstraintLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:background="?attr/backGroundColor">
+
+           <TextView
+            android:id="@+id/settingsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="casual"
+            android:text="@string/settings"
+            android:textColor="?attr/textColor"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+           <Button
+               android:id="@+id/settingsBack"
+               android:layout_width="30dp"
+               android:layout_height="30dp"
+               android:layout_marginStart="10dp"
+               android:background="@drawable/ic_back"
+               android:backgroundTint="?attr/mainBlueColor"
+               app:layout_constraintBottom_toBottomOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toTopOf="parent" />
+
+           <ImageView
+               android:id="@+id/settingsNotificationButton"
+               android:layout_width="30dp"
+               android:layout_height="30dp"
+               android:layout_marginEnd="8dp"
+               android:visibility="gone"
+               app:layout_constraintBottom_toBottomOf="parent"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintTop_toTopOf="parent"
+               app:srcCompat="@drawable/ic_notification_empty"
+               android:contentDescription="@string/notifications" />
+
+       </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <View
+        android:id="@+id/settingsLine"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="?attr/mainBlueColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/settingsToolbar" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/settingsBanner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/settingsLine">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/backGroundColor">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/settingsCardView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginRight="50dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:strokeColor="@color/mBlue"
+                app:strokeWidth="2dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/settingsCard2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?attr/backGroundColor"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/settingsSignUp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="casual"
+                        android:text="@string/signUp"
+                        android:textColor="?attr/textColor"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/settingsLogIn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/logIn"
+                        android:textColor="?attr/textColor"
+                        android:textSize="18sp"
+                        app:layout_constraintEnd_toEndOf="@+id/settingsSignUp"
+                        app:layout_constraintStart_toStartOf="@+id/settingsSignUp"
+                        app:layout_constraintTop_toBottomOf="@+id/settingsSignUp" />
+
+                    <TextView
+                        android:id="@+id/settingsGoogleInfo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="2dp"
+                        android:text="@string/not_google_info"
+                        android:textSize="12sp"
+                        android:textColor="?attr/textHintColor"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/settingsLogIn" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/settingsCard1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/backGroundColor"
+                    android:visibility="gone">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/settingsPicture"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_marginTop="16dp"
+                        app:civ_border_color="?attr/mainBlueColor"
+                        app:civ_border_width="2dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/settingsUsername"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="casual"
+                        android:textColor="?attr/textColor"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="@+id/settingsPicture"
+                        app:layout_constraintStart_toStartOf="@+id/settingsPicture"
+                        app:layout_constraintTop_toBottomOf="@+id/settingsPicture" />
+
+                    <TextView
+                        android:id="@+id/settingsTitle3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="2dp"
+                        android:text="@string/uni_name1"
+                        android:textColor="?attr/mainBlueColor"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/settingsAvgNumber" />
+
+                    <TextView
+                        android:id="@+id/settingsUniName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="16dp"
+                        android:textColor="?attr/textColor"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/settingsTitle3"
+                        app:layout_constraintTop_toBottomOf="@+id/settingsTitle3" />
+
+                    <TextView
+                        android:id="@+id/settingsTitle4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="@string/field_name1"
+                        android:textColor="?attr/mainBlueColor"
+                        app:layout_constraintStart_toStartOf="@+id/settingsTitle3"
+                        app:layout_constraintTop_toBottomOf="@+id/settingsUniName" />
+
+                    <TextView
+                        android:id="@+id/settingsFieldName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="16dp"
+                        android:textColor="?attr/textColor"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/settingsTitle4"
+                        app:layout_constraintTop_toBottomOf="@+id/settingsTitle4" />
+
+                    <LinearLayout
+                        android:id="@+id/settingsLinearLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginRight="16dp"
+                        android:orientation="vertical"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/settingsFieldName">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/settingsTitle5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/rateNumber"
+                                android:textColor="?attr/greenColor" />
+
+                            <TextView
+                                android:id="@+id/settingsTitle6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/likeNumber"
+                                android:textColor="?attr/likeTxtColor" />
+
+                            <TextView
+                                android:id="@+id/settingsTitle7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/disliked"
+                                android:textColor="?attr/likeTxtColor" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/settingsRateNumber"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:gravity="center"
+                                android:textAllCaps="false"
+                                android:textColor="?attr/textColor" />
+
+                            <TextView
+                                android:id="@+id/settingsLikeNumber"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:gravity="center"
+                                android:textColor="?attr/textColor" />
+
+                            <TextView
+                                android:id="@+id/settingsDislikeNumber"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:textColor="?attr/textColor" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/settingsAvgNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        app:layout_constraintEnd_toEndOf="@+id/settingsUsername"
+                        app:layout_constraintStart_toStartOf="@+id/settingsUsername"
+                        app:layout_constraintTop_toBottomOf="@+id/settingsUsername" />
+
+                    <TextView
+                        android:id="@+id/settingsTitle9"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginEnd="8dp"
+                        android:text="@string/likedNumber"
+                        android:textColor="?attr/mainBlueColor"
+                        app:layout_constraintEnd_toStartOf="@+id/settingsLikedNumber"
+                        app:layout_constraintStart_toStartOf="@+id/settingsLinearLayout"
+                        app:layout_constraintTop_toBottomOf="@+id/settingsLinearLayout" />
+
+                    <TextView
+                        android:id="@+id/settingsLikedNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="?attr/greenColor"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@+id/settingsTitle9"
+                        app:layout_constraintEnd_toEndOf="@+id/settingsLinearLayout"
+                        app:layout_constraintTop_toTopOf="@+id/settingsTitle9" />
+
+                    <TextView
+                        android:id="@+id/settingsTitle10"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:text="@string/dislikedNumber"
+                        android:textColor="?attr/mainBlueColor"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/settingsDislikedNumber"
+                        app:layout_constraintStart_toStartOf="@+id/settingsTitle9"
+                        app:layout_constraintTop_toBottomOf="@+id/settingsTitle9" />
+
+                    <TextView
+                        android:id="@+id/settingsDislikedNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="?attr/likeTxtColor"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@+id/settingsTitle10"
+                        app:layout_constraintEnd_toEndOf="@+id/settingsLikedNumber"
+                        app:layout_constraintTop_toTopOf="@+id/settingsTitle10" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/settingsTitle1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="@string/darkMode"
+                android:textColor="?attr/textColor"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/settingsCardView"
+                app:layout_constraintTop_toBottomOf="@+id/settingsCardView" />
+
+            <TextView
+                android:id="@+id/settingsTitle2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="@string/language"
+                android:textColor="?attr/textColor"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/settingsTitle1"
+                app:layout_constraintTop_toBottomOf="@+id/settingsTitle1" />
+
+            <Switch
+                android:id="@+id/settingsSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="?attr/mainBlueColor"
+                app:layout_constraintBottom_toBottomOf="@+id/settingsTitle1"
+                app:layout_constraintEnd_toEndOf="@+id/settingsCardView"
+                app:layout_constraintTop_toTopOf="@+id/settingsTitle1"
+                tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+            <TextView
+                android:id="@+id/settingsSignOut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="@string/signOut"
+                android:textColor="@android:color/holo_red_light"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="@+id/settingsTitle2"
+                app:layout_constraintTop_toBottomOf="@+id/settingsTitle2" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/settingsLanguage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/settingsTitle2"
+                app:layout_constraintEnd_toEndOf="@+id/settingsSwitch"
+                app:layout_constraintStart_toStartOf="@+id/settingsSwitch"
+                app:layout_constraintTop_toTopOf="@+id/settingsTitle2"
+                app:strokeColor="@color/mBlue"
+                app:strokeWidth="2dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?attr/backGroundColor">
+
+                    <TextView
+                        android:id="@+id/settingsLangTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:textColor="?attr/textColor"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/settingsTitle8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:text="@string/preview_exp"
+                android:textColor="?attr/textColor"
+                android:textSize="12sp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@+id/settingsCardView"
+                app:layout_constraintStart_toStartOf="@+id/settingsCardView" />
+
+            <Button
+                android:id="@+id/settingsChangeButton"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginBottom="2dp"
+                android:background="@drawable/ic_settings"
+                android:backgroundTint="?attr/backGroundColor"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@+id/settingsCardView"
+                app:layout_constraintEnd_toEndOf="@+id/settingsCardView" />
+
+            <TextView
+                android:id="@+id/settingsOfferProf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="@string/offer_prof_name"
+                android:textColor="?attr/textHintColor"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/settingsSignOut"
+                app:layout_constraintTop_toBottomOf="@+id/settingsSignOut" />
+
+            <TextView
+                android:id="@+id/settingsContactUs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="@string/contact_us"
+                android:textColor="?attr/textHintColor"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/settingsOfferProf"
+                app:layout_constraintTop_toBottomOf="@+id/settingsAddProf" />
+
+            <TextView
+                android:id="@+id/settingsAddProf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="@string/add_prof"
+                android:textColor="?attr/textHintColor"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="@+id/settingsOfferProf"
+                app:layout_constraintTop_toBottomOf="@+id/settingsOfferProf" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/settingsBanner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="visible"
+        app:adSize="BANNER"
+        app:adUnitId="ca-app-pub-4004348027309516/1987023061"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="mainBlueColor" format="color"/>
+    <attr name="textColor" format="color"/>
+    <attr name="backGroundColor" format="color"/>
+    <attr name="textHintColor" format="color"/>
+    <attr name="colorPrimaryDark" format="color"/>
+    <attr name="greenColor" format="color"/>
+    <attr name="likeTxtColor" format="color"/>
+    <attr name="spinnerMenuColor" format="color"/>
+</resources>

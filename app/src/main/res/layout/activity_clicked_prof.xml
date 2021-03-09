@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/backGroundColor"
+    tools:context=".ClickedProfActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/clickedProfToolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="?attr/backGroundColor"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:contentInsetStart="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?attr/backGroundColor">
+
+            <TextView
+                android:id="@+id/clickedProfTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="casual"
+                android:text="@string/prof_profile"
+                android:textColor="?attr/textColor"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/clickedProfBack"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/ic_back"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/clickedProfRateButton"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_review"
+                android:contentDescription="@string/im_exp_5" />
+
+            <ImageView
+                android:id="@+id/clickedProfVerification"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginLeft="4dp"
+                app:layout_constraintBottom_toBottomOf="@+id/clickedProfTitle"
+                app:layout_constraintStart_toEndOf="@+id/clickedProfTitle"
+                app:layout_constraintTop_toTopOf="@+id/clickedProfTitle"
+                tools:ignore="ContentDescription" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <View
+        android:id="@+id/clickedProfLine"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="?attr/mainBlueColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clickedProfToolbar" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/clickedProfPicture"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        app:civ_border_color="?attr/mainBlueColor"
+        app:civ_border_width="2dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clickedProfLine" />
+
+    <TextView
+        android:id="@+id/clickedProfName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:textColor="?attr/textColor"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/clickedProfRating"
+        app:layout_constraintStart_toEndOf="@+id/clickedProfPicture"
+        app:layout_constraintTop_toTopOf="@+id/clickedProfPicture" />
+
+    <TextView
+        android:id="@+id/clickedProfField"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:textColor="?attr/textHintColor"
+        app:layout_constraintBottom_toTopOf="@+id/clickedProfCityUni"
+        app:layout_constraintEnd_toStartOf="@+id/clickedProfRating"
+        app:layout_constraintStart_toStartOf="@+id/clickedProfName"
+        app:layout_constraintTop_toBottomOf="@+id/clickedProfName" />
+
+    <TextView
+        android:id="@+id/clickedProfCityUni"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:textColor="?attr/textHintColor"
+        app:layout_constraintBottom_toBottomOf="@+id/clickedProfPicture"
+        app:layout_constraintEnd_toStartOf="@+id/clickedProfRating"
+        app:layout_constraintStart_toStartOf="@+id/clickedProfField" />
+
+    <TextView
+        android:id="@+id/clickedProfRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/clickedProfLine2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clickedProfLine" />
+
+    <View
+        android:id="@+id/clickedProfLine2"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:background="?attr/mainBlueColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clickedProfCityUni" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clickedProfButtonLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?attr/backGroundColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clickedProfLine2">
+
+        <ImageView
+            android:id="@+id/clickedProfDrop"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_arrow_right"
+            android:contentDescription="@string/im_exp_6" />
+
+        <TextView
+            android:id="@+id/clickedProfTitle2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp"
+            android:fontFamily="casual"
+            android:text="@string/rating_title"
+            android:textColor="?attr/mainBlueColor"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/clickedProfDrop"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clickedProfRatingsLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="?attr/backGroundColor"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clickedProfButtonLayout">
+
+        <TextView
+            android:id="@+id/clickedProfTitle3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/rating_helpfulness"
+            android:textColor="?attr/textColor"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/clickedProfTotalNumber" />
+
+        <TextView
+            android:id="@+id/clickedProfTitle4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/rating_attendance"
+            android:textColor="?attr/textColor"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/clickedProfTitle3"
+            app:layout_constraintTop_toBottomOf="@+id/clickedProfTitle3" />
+
+        <TextView
+            android:id="@+id/clickedProfTitle5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/rating_difficulty"
+            android:textColor="?attr/textColor"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/clickedProfTitle4"
+            app:layout_constraintTop_toBottomOf="@+id/clickedProfTitle4" />
+
+        <TextView
+            android:id="@+id/clickedProfTitle6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/rating_lecture"
+            android:textColor="?attr/textColor"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/clickedProfTitle5"
+            app:layout_constraintTop_toBottomOf="@+id/clickedProfTitle5" />
+
+        <TextView
+            android:id="@+id/clickedProfTitle7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/rating_textbook"
+            android:textColor="?attr/textColor"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/clickedProfTitle6"
+            app:layout_constraintTop_toBottomOf="@+id/clickedProfTitle6" />
+
+        <TextView
+            android:id="@+id/clickedProfRT1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/clickedProfTitle3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/clickedProfTitle3" />
+
+        <TextView
+            android:id="@+id/clickedProfRT2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/clickedProfTitle4"
+            app:layout_constraintEnd_toEndOf="@+id/clickedProfRT1"
+            app:layout_constraintTop_toTopOf="@+id/clickedProfTitle4" />
+
+        <TextView
+            android:id="@+id/clickedProfRT3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/clickedProfTitle5"
+            app:layout_constraintEnd_toEndOf="@+id/clickedProfRT2"
+            app:layout_constraintTop_toTopOf="@+id/clickedProfTitle5" />
+
+        <TextView
+            android:id="@+id/clickedProfRT4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/clickedProfTitle6"
+            app:layout_constraintEnd_toEndOf="@+id/clickedProfRT3"
+            app:layout_constraintTop_toTopOf="@+id/clickedProfTitle6" />
+
+        <TextView
+            android:id="@+id/clickedProfRT5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/clickedProfTitle7"
+            app:layout_constraintEnd_toEndOf="@+id/clickedProfRT4"
+            app:layout_constraintTop_toTopOf="@+id/clickedProfTitle7" />
+
+        <TextView
+            android:id="@+id/clickedProfTotalNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="?attr/textHintColor"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/clickedProfLine3"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="?attr/mainBlueColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clickedProfRatingsLayout" />
+
+    <TextView
+        android:id="@+id/clickedProfTitle8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="casual"
+        android:text="@string/rating_comments_title"
+        android:textColor="?attr/mainBlueColor"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clickedProfLine3" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/clickedProfRw"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="2dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clickedProfTotalComments" />
+
+    <TextView
+        android:id="@+id/clickedProfTotalComments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:textSize="12sp"
+        android:textColor="?attr/textHintColor"
+        app:layout_constraintEnd_toEndOf="@+id/clickedProfTitle8"
+        app:layout_constraintStart_toStartOf="@+id/clickedProfTitle8"
+        app:layout_constraintTop_toBottomOf="@+id/clickedProfTitle8" />
+
+    <ProgressBar
+        android:id="@+id/clickedProfProgressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clickedProfTotalComments" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/noCommentLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        android:background="?attr/backGroundColor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clickedProfTotalComments">
+
+        <ImageView
+            android:id="@+id/noCommentImage"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_no_comment"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/noCommentInfo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginRight="4dp"
+            android:gravity="center"
+            android:text="@string/no_comment"
+            android:textColor="?attr/textColor"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/noCommentImage" />
+
+        <TextView
+            android:id="@+id/noCommentButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:gravity="center"
+            android:text="@string/no_comment2"
+            android:textColor="?attr/mainBlueColor"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/noCommentInfo" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

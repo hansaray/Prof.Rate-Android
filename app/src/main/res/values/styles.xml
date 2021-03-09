@@ -1,0 +1,54 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="splashScreenStyle" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_layout</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="AlertDialogCustomDark" parent="@android:style/Theme.Dialog">
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:typeface">normal</item>
+        <item name="android:background">#121212</item>
+    </style>
+
+    <style name="CheckBoxCustomDark" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:typeface">normal</item>
+        <item name="checkedIconTint">#008ECC</item>
+        <item name="android:buttonTint">#008ECC</item>
+        <item name="android:background">#121212</item>
+    </style>
+
+    <style name="LightTheme" parent="AppTheme">
+        <item name="textColor">#000000</item>
+        <item name="backGroundColor">#ffffff</item>
+        <item name="mainBlueColor">#0F52BA</item>
+        <item name="textHintColor">#778899</item>
+        <item name="colorPrimaryDark">#ffffff</item>
+        <item name="greenColor">#228B22</item>
+        <item name="likeTxtColor">#DC143C</item>
+        <item name="spinnerMenuColor">#F5F5F5</item>
+    </style>
+
+    <style name="DarkTheme" parent="AppTheme">
+        <item name="textColor">#ffffff</item>
+        <item name="backGroundColor">#121212</item>
+        <item name="mainBlueColor">#008ECC</item>
+        <item name="textHintColor">#778899</item>
+        <item name="colorPrimaryDark">#121212</item>
+        <item name="greenColor">#32CD32</item>
+        <item name="likeTxtColor">#F08080</item>
+        <item name="spinnerMenuColor">#474747</item>
+    </style>
+
+</resources>

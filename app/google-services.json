@@ -1,0 +1,127 @@
+{
+  "project_info": {
+    "project_number": "56599474640",
+    "firebase_url": "https://unirateapp.firebaseio.com",
+    "project_id": "unirateapp",
+    "storage_bucket": "unirateapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:56599474640:android:54bc51d0bd8acf0c1b09d5",
+        "android_client_info": {
+          "package_name": "com.example.unirateapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "56599474640-u2mh26qln9sgsf7clt2881t616ddkr8t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.unirateapp",
+            "certificate_hash": "68925e66b07be966dfe77f88b3024fa3a4f30390"
+          }
+        },
+        {
+          "client_id": "56599474640-dmpvicp6s8tf352pmv6eih2me7bmofe4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1ytJkuyKYxL7fyL8037isyfk62-dkoxw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "56599474640-dmpvicp6s8tf352pmv6eih2me7bmofe4.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "56599474640-qol7coivcv3jsj58coitke2q51ctolpq.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.unirateapp.uniRateApp"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:56599474640:android:cfcd7ecf4c56e2bb1b09d5",
+        "android_client_info": {
+          "package_name": "com.example.unirateappadmin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "56599474640-dmpvicp6s8tf352pmv6eih2me7bmofe4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1ytJkuyKYxL7fyL8037isyfk62-dkoxw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "56599474640-dmpvicp6s8tf352pmv6eih2me7bmofe4.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "56599474640-qol7coivcv3jsj58coitke2q51ctolpq.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.unirateapp.uniRateApp"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:56599474640:android:8415608585078c001b09d5",
+        "android_client_info": {
+          "package_name": "com.simpla.turnedTables"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "56599474640-dmpvicp6s8tf352pmv6eih2me7bmofe4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1ytJkuyKYxL7fyL8037isyfk62-dkoxw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "56599474640-dmpvicp6s8tf352pmv6eih2me7bmofe4.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "56599474640-qol7coivcv3jsj58coitke2q51ctolpq.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.unirateapp.uniRateApp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

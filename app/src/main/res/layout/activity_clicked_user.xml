@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/backGroundColor"
+    tools:context=".ClickedUserActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/cUserToolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="?attr/backGroundColor"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:contentInsetStart="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?attr/backGroundColor">
+
+            <TextView
+                android:id="@+id/cUserTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="casual"
+                android:text="@string/user_profile"
+                android:textColor="?attr/textColor"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/cUserBack"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/ic_back"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <View
+        android:id="@+id/cUserLine"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="?attr/mainBlueColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cUserToolbar" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/cUserPicture"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="8dp"
+        app:civ_border_color="?attr/mainBlueColor"
+        app:civ_border_width="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cUserLine" />
+
+    <TextView
+        android:id="@+id/cUserUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="casual"
+        android:textColor="?attr/textColor"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/cUserPicture"
+        app:layout_constraintStart_toStartOf="@+id/cUserPicture"
+        app:layout_constraintTop_toBottomOf="@+id/cUserPicture" />
+
+    <TextView
+        android:id="@+id/cUserTitle3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="2dp"
+        android:text="@string/uni_name1"
+        android:textColor="?attr/mainBlueColor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cUserAvgNumber" />
+
+    <TextView
+        android:id="@+id/cUserUniName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:textColor="?attr/textColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/cUserTitle3"
+        app:layout_constraintTop_toBottomOf="@+id/cUserTitle3" />
+
+    <TextView
+        android:id="@+id/cUserTitle4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/field_name1"
+        android:textColor="?attr/mainBlueColor"
+        app:layout_constraintStart_toStartOf="@+id/cUserTitle3"
+        app:layout_constraintTop_toBottomOf="@+id/cUserUniName" />
+
+    <TextView
+        android:id="@+id/cUserFieldName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:textColor="?attr/textColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/cUserTitle4"
+        app:layout_constraintTop_toBottomOf="@+id/cUserTitle4" />
+
+    <LinearLayout
+        android:id="@+id/cUserLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cUserFieldName">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/cUserTitle5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/rateNumber"
+                android:textColor="?attr/greenColor" />
+
+            <TextView
+                android:id="@+id/cUserTitle6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/likeNumber"
+                android:textColor="?attr/likeTxtColor" />
+
+            <TextView
+                android:id="@+id/cUserTitle7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/disliked"
+                android:textColor="?attr/likeTxtColor" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/cUserRateNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textAllCaps="false"
+                android:textColor="?attr/textColor" />
+
+            <TextView
+                android:id="@+id/cUserLikeNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="?attr/textColor" />
+
+            <TextView
+                android:id="@+id/cUserDislikeNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="?attr/textColor" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/cUserAvgNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        app:layout_constraintEnd_toEndOf="@+id/cUserUsername"
+        app:layout_constraintStart_toStartOf="@+id/cUserUsername"
+        app:layout_constraintTop_toBottomOf="@+id/cUserUsername" />
+
+    <TextView
+        android:id="@+id/cUserTitle9"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="@string/likedNumber"
+        android:textColor="?attr/mainBlueColor"
+        app:layout_constraintEnd_toStartOf="@+id/cUserLikedNumber"
+        app:layout_constraintStart_toStartOf="@+id/cUserLinearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/cUserLinearLayout" />
+
+    <TextView
+        android:id="@+id/cUserLikedNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="?attr/greenColor"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/cUserTitle9"
+        app:layout_constraintEnd_toEndOf="@+id/cUserLinearLayout"
+        app:layout_constraintTop_toTopOf="@+id/cUserTitle9" />
+
+    <TextView
+        android:id="@+id/cUserTitle10"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="@string/dislikedNumber"
+        android:textColor="?attr/mainBlueColor"
+        app:layout_constraintEnd_toStartOf="@+id/cUserDislikedNumber"
+        app:layout_constraintStart_toStartOf="@+id/cUserTitle9"
+        app:layout_constraintTop_toBottomOf="@+id/cUserTitle9" />
+
+    <TextView
+        android:id="@+id/cUserDislikedNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="?attr/likeTxtColor"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/cUserTitle10"
+        app:layout_constraintEnd_toEndOf="@+id/cUserLikedNumber"
+        app:layout_constraintTop_toTopOf="@+id/cUserTitle10" />
+
+    <View
+        android:id="@+id/cUserLine2"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_marginTop="2dp"
+        android:background="?attr/mainBlueColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cUserTitle10" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/cUserRw"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cUserLine2" />
+
+    <ProgressBar
+        android:id="@+id/cUserProgressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cUserLine2" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/noRatingLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="?attr/backGroundColor"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cUserLine2">
+
+        <ImageView
+            android:id="@+id/noRatingImage"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_no_comment"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/noRatingInfo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:gravity="center"
+            android:text="@string/no_comment3"
+            android:textColor="?attr/textColor"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/noRatingImage" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

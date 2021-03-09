@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/backGroundColor"
+    tools:context=".BiggerRatingActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/bRatingToolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="?attr/backGroundColor"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?attr/backGroundColor">
+
+            <TextView
+                android:id="@+id/bRatingToolTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="casual"
+                android:text="@string/rating"
+                android:textColor="?attr/textColor"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/bRatingBack"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/ic_back"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <View
+        android:id="@+id/bRatingLine2"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="?attr/mainBlueColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bRatingToolbar" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bRatingProfLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bRatingLine2">
+
+        <TextView
+            android:id="@+id/bRatingProfName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/bRatingPicture"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="4dp"
+        app:civ_border_color="?attr/mainBlueColor"
+        app:civ_border_width="2dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bRatingProfLayout" />
+
+    <TextView
+        android:id="@+id/bRatingUsername"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:textColor="?attr/textColor"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/bRatingTitle"
+        app:layout_constraintStart_toEndOf="@+id/bRatingPicture"
+        app:layout_constraintTop_toTopOf="@+id/bRatingPicture" />
+
+    <TextView
+        android:id="@+id/bRatingUserField"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:textColor="?attr/textHintColor"
+        app:layout_constraintBottom_toTopOf="@+id/bRatingUserUni"
+        app:layout_constraintEnd_toStartOf="@+id/bRatingTitle"
+        app:layout_constraintStart_toStartOf="@+id/bRatingUsername"
+        app:layout_constraintTop_toBottomOf="@+id/bRatingUsername" />
+
+    <TextView
+        android:id="@+id/bRatingUserUni"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:textColor="?attr/textHintColor"
+        app:layout_constraintBottom_toBottomOf="@+id/bRatingPicture"
+        app:layout_constraintEnd_toStartOf="@+id/bRatingTitle"
+        app:layout_constraintStart_toEndOf="@+id/bRatingPicture" />
+
+    <TextView
+        android:id="@+id/bRatingTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:text="@string/average"
+        android:textColor="?attr/textColor"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/bRatingUsername" />
+
+    <TextView
+        android:id="@+id/bRatingAvgNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/bRatingPicture"
+        app:layout_constraintEnd_toEndOf="@+id/bRatingTitle"
+        app:layout_constraintStart_toStartOf="@+id/bRatingTitle"
+        app:layout_constraintTop_toBottomOf="@+id/bRatingTitle" />
+
+    <TextView
+        android:id="@+id/bRatingTitle2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="@string/rating_helpfulness"
+        android:textColor="?attr/textColor"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/bRatingHelpNum"
+        app:layout_constraintStart_toStartOf="@+id/bRatingPicture"
+        app:layout_constraintTop_toBottomOf="@+id/bRatingUserUni" />
+
+    <TextView
+        android:id="@+id/bRatingHelpNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/bRatingTitle2"
+        app:layout_constraintEnd_toEndOf="@+id/bRatingTitle"
+        app:layout_constraintTop_toTopOf="@+id/bRatingTitle2" />
+
+    <TextView
+        android:id="@+id/bRatingTitle3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="@string/rating_difficulty"
+        android:textColor="?attr/textColor"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/bRatingDiffNum"
+        app:layout_constraintStart_toStartOf="@+id/bRatingTitle2"
+        app:layout_constraintTop_toBottomOf="@+id/bRatingTitle2" />
+
+    <TextView
+        android:id="@+id/bRatingDiffNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/bRatingTitle3"
+        app:layout_constraintEnd_toEndOf="@+id/bRatingHelpNum"
+        app:layout_constraintTop_toTopOf="@+id/bRatingTitle3" />
+
+    <TextView
+        android:id="@+id/bRatingTitle4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="@string/rating_lecture"
+        android:textColor="?attr/textColor"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/bRatingLecNum"
+        app:layout_constraintStart_toStartOf="@+id/bRatingTitle3"
+        app:layout_constraintTop_toBottomOf="@+id/bRatingTitle3" />
+
+    <TextView
+        android:id="@+id/bRatingLecNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/bRatingTitle4"
+        app:layout_constraintEnd_toEndOf="@+id/bRatingDiffNum"
+        app:layout_constraintTop_toTopOf="@+id/bRatingTitle4" />
+
+    <TextView
+        android:id="@+id/bRatingTitle5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="@string/rating_attendance"
+        android:textColor="?attr/textColor"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/bRatingAttNum"
+        app:layout_constraintStart_toStartOf="@+id/bRatingTitle4"
+        app:layout_constraintTop_toBottomOf="@+id/bRatingTitle4" />
+
+    <TextView
+        android:id="@+id/bRatingAttNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/bRatingTitle5"
+        app:layout_constraintEnd_toEndOf="@+id/bRatingLecNum"
+        app:layout_constraintTop_toTopOf="@+id/bRatingTitle5" />
+
+    <TextView
+        android:id="@+id/bRatingTitle6"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="@string/rating_textbook"
+        android:textColor="?attr/textColor"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/bRatingTxtNum"
+        app:layout_constraintStart_toStartOf="@+id/bRatingTitle4"
+        app:layout_constraintTop_toBottomOf="@+id/bRatingTitle5" />
+
+    <TextView
+        android:id="@+id/bRatingTxtNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/bRatingTitle6"
+        app:layout_constraintEnd_toEndOf="@+id/bRatingAttNum"
+        app:layout_constraintTop_toTopOf="@+id/bRatingTitle6" />
+
+    <TextView
+        android:id="@+id/bRatingComment"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="?attr/textColor"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/bRatingTxtNum"
+        app:layout_constraintStart_toStartOf="@+id/bRatingTitle4"
+        app:layout_constraintTop_toBottomOf="@+id/bRatingTitle6" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bRatingButtonsLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:background="?attr/backGroundColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bRatingComment">
+
+        <ImageView
+            android:id="@+id/bRatingLike"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_comment_like"
+            android:contentDescription="@string/im_exp_2" />
+
+        <ImageView
+            android:id="@+id/bRatingDislike"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintStart_toEndOf="@+id/bRatingLikeNumber"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_comment_dislike"
+            android:contentDescription="@string/im_exp_3" />
+
+        <TextView
+            android:id="@+id/bRatingLikeNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp"
+            android:textColor="?attr/greenColor"
+            app:layout_constraintBottom_toBottomOf="@+id/bRatingLike"
+            app:layout_constraintStart_toEndOf="@+id/bRatingLike"
+            app:layout_constraintTop_toTopOf="@+id/bRatingLike" />
+
+        <TextView
+            android:id="@+id/bRatingDislikeNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp"
+            android:textColor="?attr/likeTxtColor"
+            app:layout_constraintBottom_toBottomOf="@+id/bRatingDislike"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/bRatingDislike"
+            app:layout_constraintTop_toTopOf="@+id/bRatingDislike" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/bRatingLine"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_marginTop="2dp"
+        android:background="?attr/mainBlueColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bRatingTime" />
+
+    <TextView
+        android:id="@+id/bRatingTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:textColor="?attr/textHintColor"
+        app:layout_constraintEnd_toEndOf="@+id/bRatingButtonsLayout"
+        app:layout_constraintStart_toStartOf="@+id/bRatingButtonsLayout"
+        app:layout_constraintTop_toBottomOf="@+id/bRatingButtonsLayout" />
+
+    <ImageView
+        android:id="@+id/bRatingDelete"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/bRatingButtonsLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/bRatingButtonsLayout"
+        app:srcCompat="@drawable/ic_delete"
+        android:contentDescription="@string/im_exp_4" />
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/bRatingBanner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        app:adSize="BANNER"
+        app:adUnitId="ca-app-pub-4004348027309516/1823371533"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

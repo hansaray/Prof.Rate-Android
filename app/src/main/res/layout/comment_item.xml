@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cItemLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/backGroundColor">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cItemProfLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/cItemProfName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/cItemPicture"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="4dp"
+        app:civ_border_color="?attr/mainBlueColor"
+        app:civ_border_width="2dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cItemProfLayout" />
+
+    <TextView
+        android:id="@+id/cItemUsername"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:textColor="?attr/textColor"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/cItemTitle"
+        app:layout_constraintStart_toEndOf="@+id/cItemPicture"
+        app:layout_constraintTop_toTopOf="@+id/cItemPicture" />
+
+    <TextView
+        android:id="@+id/cItemUserField"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:textColor="?attr/textHintColor"
+        app:layout_constraintBottom_toTopOf="@+id/cItemUserUni"
+        app:layout_constraintEnd_toStartOf="@+id/cItemTitle"
+        app:layout_constraintStart_toStartOf="@+id/cItemUsername"
+        app:layout_constraintTop_toBottomOf="@+id/cItemUsername" />
+
+    <TextView
+        android:id="@+id/cItemUserUni"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:textColor="?attr/textHintColor"
+        app:layout_constraintBottom_toBottomOf="@+id/cItemPicture"
+        app:layout_constraintEnd_toStartOf="@+id/cItemTitle"
+        app:layout_constraintStart_toEndOf="@+id/cItemPicture" />
+
+    <TextView
+        android:id="@+id/cItemTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:text="@string/average"
+        android:textColor="?attr/textColor"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cItemUsername" />
+
+    <TextView
+        android:id="@+id/cItemAvgNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/cItemPicture"
+        app:layout_constraintEnd_toEndOf="@+id/cItemTitle"
+        app:layout_constraintStart_toStartOf="@+id/cItemTitle"
+        app:layout_constraintTop_toBottomOf="@+id/cItemTitle" />
+
+    <TextView
+        android:id="@+id/cItemTitle2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="@string/rating_helpfulness"
+        android:textColor="?attr/textColor"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/cItemHelpNum"
+        app:layout_constraintStart_toStartOf="@+id/cItemPicture"
+        app:layout_constraintTop_toBottomOf="@+id/cItemUserUni" />
+
+    <TextView
+        android:id="@+id/cItemHelpNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/cItemTitle2"
+        app:layout_constraintEnd_toEndOf="@+id/cItemTitle"
+        app:layout_constraintTop_toTopOf="@+id/cItemTitle2" />
+
+    <TextView
+        android:id="@+id/cItemTitle3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="@string/rating_difficulty"
+        android:textColor="?attr/textColor"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/cItemDiffNum"
+        app:layout_constraintStart_toStartOf="@+id/cItemTitle2"
+        app:layout_constraintTop_toBottomOf="@+id/cItemTitle2" />
+
+    <TextView
+        android:id="@+id/cItemDiffNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/cItemTitle3"
+        app:layout_constraintEnd_toEndOf="@+id/cItemHelpNum"
+        app:layout_constraintTop_toTopOf="@+id/cItemTitle3" />
+
+    <TextView
+        android:id="@+id/cItemTitle4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="@string/rating_lecture"
+        android:textColor="?attr/textColor"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/cItemLecNum"
+        app:layout_constraintStart_toStartOf="@+id/cItemTitle3"
+        app:layout_constraintTop_toBottomOf="@+id/cItemTitle3" />
+
+    <TextView
+        android:id="@+id/cItemLecNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/cItemTitle4"
+        app:layout_constraintEnd_toEndOf="@+id/cItemDiffNum"
+        app:layout_constraintTop_toTopOf="@+id/cItemTitle4" />
+
+    <TextView
+        android:id="@+id/cItemTitle5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="@string/rating_attendance"
+        android:textColor="?attr/textColor"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/cItemAttNum"
+        app:layout_constraintStart_toStartOf="@+id/cItemTitle4"
+        app:layout_constraintTop_toBottomOf="@+id/cItemTitle4" />
+
+    <TextView
+        android:id="@+id/cItemAttNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/cItemTitle5"
+        app:layout_constraintEnd_toEndOf="@+id/cItemLecNum"
+        app:layout_constraintTop_toTopOf="@+id/cItemTitle5" />
+
+    <TextView
+        android:id="@+id/cItemTitle6"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="@string/rating_textbook"
+        android:textColor="?attr/textColor"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/cItemTxtNum"
+        app:layout_constraintStart_toStartOf="@+id/cItemTitle4"
+        app:layout_constraintTop_toBottomOf="@+id/cItemTitle5" />
+
+    <TextView
+        android:id="@+id/cItemTxtNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/cItemTitle6"
+        app:layout_constraintEnd_toEndOf="@+id/cItemAttNum"
+        app:layout_constraintTop_toTopOf="@+id/cItemTitle6" />
+
+    <TextView
+        android:id="@+id/cItemComment"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="?attr/textColor"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/cItemTxtNum"
+        app:layout_constraintStart_toStartOf="@+id/cItemTitle4"
+        app:layout_constraintTop_toBottomOf="@+id/cItemTitle6" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cItemButtonsLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:background="?attr/backGroundColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cItemComment">
+
+        <ImageView
+            android:id="@+id/cItemLike"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_comment_like"
+            android:contentDescription="@string/im_exp_2" />
+
+        <ImageView
+            android:id="@+id/cItemDislike"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintStart_toEndOf="@+id/cItemLikeNumber"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_comment_dislike"
+            android:contentDescription="@string/im_exp_3" />
+
+        <TextView
+            android:id="@+id/cItemLikeNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp"
+            android:textColor="?attr/greenColor"
+            app:layout_constraintBottom_toBottomOf="@+id/cItemLike"
+            app:layout_constraintStart_toEndOf="@+id/cItemLike"
+            app:layout_constraintTop_toTopOf="@+id/cItemLike" />
+
+        <TextView
+            android:id="@+id/cItemDislikeNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp"
+            android:textColor="?attr/likeTxtColor"
+            app:layout_constraintBottom_toBottomOf="@+id/cItemDislike"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/cItemDislike"
+            app:layout_constraintTop_toTopOf="@+id/cItemDislike" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/cItemReport"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginRight="2dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cItemButtonsLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cItemButtonsLayout"
+        app:srcCompat="@drawable/ic_report"
+        android:contentDescription="@string/im_exp_8" />
+
+    <View
+        android:id="@+id/cItemLine"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_marginTop="2dp"
+        android:background="?attr/mainBlueColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cItemTime" />
+
+    <TextView
+        android:id="@+id/cItemTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:textColor="?attr/textHintColor"
+        app:layout_constraintEnd_toEndOf="@+id/cItemButtonsLayout"
+        app:layout_constraintStart_toStartOf="@+id/cItemButtonsLayout"
+        app:layout_constraintTop_toBottomOf="@+id/cItemButtonsLayout" />
+
+    <ImageView
+        android:id="@+id/cItemDelete"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/cItemButtonsLayout"
+        app:layout_constraintEnd_toStartOf="@+id/cItemReport"
+        app:layout_constraintTop_toTopOf="@+id/cItemButtonsLayout"
+        app:srcCompat="@drawable/ic_delete"
+        android:contentDescription="@string/im_exp_4" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
